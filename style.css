@@ -1,0 +1,131 @@
+@font-face {
+    src: url(./fonts/DancingScript-VariableFont_wght.ttf);
+    font-family: dance;
+}
+
+body {
+    margin: 0 150px;
+    border: 1px solid pink; 
+    box-shadow: 1px  1px 500px 100px #71c7ec;
+}
+
+.container {
+    background-color: #8acfed;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px  1px 100px 75px #8ad0ee ;
+    gap: 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-family: dance;
+}
+
+.heading.one {
+    font-size: 75px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+button {
+    font-size: 30px;
+    font-family: dance;
+    font-weight: 300;
+    text-align: center;
+    background-color: white;
+    border-radius: 25% 10%;
+    padding: 5px 10px;
+}
+
+#btn0 {
+    color: rgb(250, 197, 100);
+    border-image: linear-gradient(90deg,rgb(250, 197, 100),rgb(250, 197, 100)) 30;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: transparent;
+}
+
+#btn1 {
+    color: black;
+    border-image: linear-gradient(90deg,black,black) 30;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+#btn2 {
+    color: rgb(0, 123, 255);
+    border-image: linear-gradient(90deg,rgb(0, 123, 255),rgb(0, 123, 255)) 30;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+#btn3 {
+    color: rgb(79, 167, 20);
+    border-image: linear-gradient(90deg,rgb(79, 167, 20),rgb(79, 167, 20)) 30;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+#btn4 {
+    border-image: linear-gradient(90deg,red,blue) 30;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#btn5 {
+    color: white;
+    border-image: linear-gradient(90deg,white,white) 30;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+#super-grid {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    box-shadow: 1px  1px 40px -15px black;
+    background-color: white;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    font-family: dance;
+    font-size: 20px;
+}
+
+
