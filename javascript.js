@@ -6,13 +6,23 @@ function make(size,color) {
     for(let i=0;i<size*size;i++) {
         let grid=document.createElement("div");
         grid.classList.add("grid");
-        grid.addEventListener('mouseover',colorSquare);
+        grid.addEventListener('pointerover',changeColor);
         container.appendChild(grid);
     }
 }
 
-function colorSquare() {
-    this.style.backgroundColor=color;
+function changeColor() {
+    if (click) {
+    if(color==="random") {
+        this.style.backgroundColor=random();
+    }
+    else {
+        this.style.backgroundColor=color;
+    } }
+}
+
+function colorButton(choice) {
+    color=choice;
 }
 
 function random() {
@@ -24,6 +34,7 @@ function random() {
 
 let color="black";
 let size=16;
+let click=false;
 make(size,color);
 
 const btn0=document.querySelector("#btn0");
@@ -32,6 +43,9 @@ const btn2=document.querySelector("#btn2");
 const btn3=document.querySelector("#btn3");
 const btn4=document.querySelector("#btn4");
 const btn5=document.querySelector("#btn5");
+const btn6=document.querySelector("#btn6");
+const btn7=document.querySelector("#btn7");
+const btn8=document.querySelector("#btn8");
 
 btn0.addEventListener('click',()=>{
     while(true) {
@@ -45,24 +59,40 @@ btn0.addEventListener('click',()=>{
 });
 
 btn1.addEventListener('click',()=>{
-    color="black";
+    colorButton("white");
 });
 
 btn2.addEventListener('click',()=>{
-    color="rgb(0, 123, 255)";
+    make(16,"black");
 });
 
 btn3.addEventListener('click',()=>{
-    color="rgb(24, 212, 24)";
+    colorButton("black");
 });
 
 btn4.addEventListener('click',()=>{
-    color=random();
+    colorButton("red");
 });
 
 btn5.addEventListener('click',()=>{
-    color="white";
+    colorButton("rgb(24, 212, 24)");
 });
+
+btn6.addEventListener('click',()=>{
+    colorButton("rgb(0, 123, 255)");
+});
+
+btn7.addEventListener('click',()=>{
+    colorButton(random());
+});
+
+btn8.addEventListener('click',()=>{
+    colorButton("random");
+});
+
+document.querySelector(".box").addEventListener('click',()=>{
+    click=!click;
+})
 
 
 
